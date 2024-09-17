@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
-export default nextConfig;
+import withLess from "next-with-less";
+
+export default withLess({
+  lessLoaderOptions: {
+    lessOptions: {
+      javascriptEnabled: true,
+    },
+  },
+});
